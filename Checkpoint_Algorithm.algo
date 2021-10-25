@@ -1,0 +1,47 @@
+ALGORITHM sentence_functions
+VAR
+    sen : STRING;
+    l_count : INTEGER;
+    w_count : INTEGER;
+    V_count : INTEGER;
+    letter: CHAR;
+    space: CHAR:=" ";
+    vowel_1 : CHAR:="a";
+    vowel_2 : CHAR:="e";
+    vowel_3 : CHAR:="i";
+    vowel_4 : CHAR:="o";
+    vowel_5 : CHAR:="u";
+BEGIN
+REPEAT
+    Write("please enter a sentence")
+    Read(sen)
+UNTIL (sen.length+1=".")
+//Letter count
+FOR letter FROM 'a' to 'z' STEP   DO
+    FOR i FROM 0 TO sen.length-1 STEP  DO
+        IF (sen[i]=letter) THEN
+            l_count:=l_count+1;
+        END_IF
+    END_FOR
+END_FOR
+ Write("This sentence has",l_count,"characters");
+
+ //Words count
+FOR i FROM 0 TO sen.length-1 STEP  DO
+    IF (sen[i]=space) THEN
+        w_count:=w_count+1;
+    END_IF
+END_FOR
+
+ Write("This sentence has",w_count,"words");
+
+// Vowel count
+FOR letter FROM 'a' to 'z' STEP   DO
+    FOR i FROM 0 TO sen.length-1 STEP  DO
+        IF (sen[i]=vowel_1 OR sen[i]=vowel_2 OR sen[i]=vowel_3 OR sen[i]=vowel_4 OR sen[i]=vowel_5) THEN
+            V_count:=V_count+1;
+        END_IF
+    END_FOR
+END_FOR
+ Write("This sentence has",V_count,"vowels");
+END
