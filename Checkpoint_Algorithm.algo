@@ -15,7 +15,7 @@ BEGIN
 REPEAT
     Write("please enter a sentence")
     Read(sen)
-UNTIL (sen.length+1=".")
+UNTIL (sen.length-1=".")
 //Letter count
 FOR letter FROM 'a' to 'z' STEP   DO
     FOR i FROM 0 TO sen.length-1 STEP  DO
