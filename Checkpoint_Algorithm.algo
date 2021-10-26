@@ -28,8 +28,8 @@ REPEAT
         w_count:=w_count+1;
     END_IF
 
-UNTIL (ch=".")
+UNTIL (ch=end_sen)
  Write("This sentence has",l_count,"characters");
- Write("This sentence has",w_count,"words");
  Write("This sentence has",V_count,"vowels");
+ Write("This sentence has",w_count,"words");
 END
